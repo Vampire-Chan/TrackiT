@@ -1,0 +1,19 @@
+body
+{
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+div
+{
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #121212; /* Dark background color */
+            color: #ffffff; /* Light text color */
+        }
+
+        .navbar {
+            background-color: #1a1a1a; /* Darker navbar background */
+        }
+
+        .navbar-brand img {
+            width: 50px; /* Adjust logo size */
+        }
+
+        .carousel-inner img {
+            width: 100%;  /* Full width of the container */
+            height: 600px; /* Fixed height */
+            object-fit: cover; /* Crop to fit while maintaining aspect ratio */
+            filter: brightness(0.8); /* Darken image slightly for better contrast */
+        }
+
+        .card {
+            width: 300px; /* Fixed width */
+            height: 400px; /* Fixed height */
+            background-color: #1a1a1a; /* Dark card background */
+            border: 1px solid #333; /* Light border for contrast */
+        }
+
+        .card img {
+            height: 200px; /* Fixed height for the image */
+            object-fit: cover; /* Ensures the image fits within the card without distorting */
+        }
+
+        .form-label, .form-control {
+            color: #ffffff; /* Light text color for form labels */
+        }
+
+        .form-control {
+            background-color: #333; /* Dark background for form inputs */
+            border: 1px solid #555; /* Light border for contrast */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Bootstrap primary button color */
+        }
+
+        .warning {
+            color: red; /* Red text for warning messages */
+            font-size: 0.875rem; /* Smaller font size for warnings */
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Menu Bar with Logo -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.pinimg.com/736x/72/37/e4/7237e4a579f97f11c2d203b7ab07dc32.jpg" alt="Logo">
+                My Website
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://upload-os-bbs.hoyolab.com/upload/2023/12/18/138101799/75ae5e3d8f6a65095f1ce0f85c48bb8d_3390752306469497234.jpg" class="d-block w-100" alt="Neuvilette">
+            </div>
+            <div class="carousel-item">
+                <img src="https://upload-os-bbs.hoyolab.com/upload/2024/07/20/387038194/ac16ada79bbe7d83cd9fe765bd11b96b_7479875130100330135.jpg" class="d-block w-100" alt="Arlecchino">
+            </div>
+            <div class="carousel-item">
+                <img src="https://upload-os-bbs.hoyolab.com/upload/2024/06/22/365249476/a5e7e85eda820d3b89e49759aeb9598d_5305597160355270053.jpg" class="d-block w-100" alt="Furina">
+            </div>
+            <div class="carousel-item">
+                <img src="https://wallpapers.com/images/hd/4k-gta-5-franklin-looking-at-city-at-night-bq6nlp808hn0xoi5.jpg" class="d-block w-100" alt="Franklin">
+            </div>
+            <div class="carousel-item">
+                <img src="https://wallpapers.com/images/hd/far-cry-3-vaas-z2ug3nh5b0imhtvs.jpg" class="d-block w-100" alt="Vaas">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/167/125/298/grand-theft-auto-iv-niko-bellic-wallpaper-preview.jpg" class="card-img-top" alt="Card Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Niko Bellic</h5>
+                        <p class="card-text">A character from the Grand Theft Auto series, known for his complex backstory.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://preview.redd.it/udsq3k086xq91.jpg?auto=webp&s=89c858b222ab38b49eb7d63f5204e8f2e4eeb25d" class="card-img-top" alt="Card Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Hyot</h5>
+                        <p class="card-text">A character featured in various media, noted for their distinct appearance.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/99/c1/77/99c177cefefad1f4f28f83e9982d7798.jpg" class="card-img-top" alt="Card Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Lara Croft</h5>
+                        <p class="card-text">An iconic video game character known for her adventurous spirit.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="container mt-5">
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                <div class="warning" id="nameWarning">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <div class="warning" id="emailWarning">Please enter your email.</div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                <div class="warning" id="messageWarning">Please enter your message.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Reset warnings
+            document.getElementById("nameWarning").style.display = "none";
+            document.getElementById("emailWarning").style.display = "none";
+            document.getElementById("messageWarning").style.display = "none";
+
+            // Check name
+            const name = document.getElementById("name").value;
+            if (name.trim() === "") {
+                document.getElementById("nameWarning").style.display = "block";
+                isValid = false;
+            }
+
+            // Check email
+            const email = document.getElementById("email").value;
+            if (email.trim() === "") {
+                document.getElementById("emailWarning").style.display = "block";
+                isValid = false;
+            }
+
+            // Check message
+            const message = document.getElementById("message").value;
+            if (message.trim() === "") {
+                document.getElementById("messageWarning").style.display = "block";
+                isValid = false;
+            }
+
+            return isValid; // Prevent form submission if invalid
+        }
+
+        // Optional: Add event listeners for input focus to clear warnings
+        document.getElementById("name").addEventListener("focus", function() {
+            document.getElementById("nameWarning").style.display = "none";
+        });
+
+        document.getElementById("email").addEventListener("focus", function() {
+            document.getElementById("emailWarning").style.display = "none";
+        });
+
+        document.getElementById("message").addEventListener("focus", function() {
+            document.getElementById("messageWarning").style.display = "none";
+        });
+    </script>
+</body>
+</html>
