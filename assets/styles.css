@@ -1,19 +1,157 @@
-body
-{
-    background-color: black;
-    color: aliceblue;
-    align-items: center;
-    justify-content: center;
+/* Body and overall layout */
+body {
+    background-color: black; /* Page background */
+    color: white; /* Text color */
+    margin: 0; /* Remove default margin */
 }
 
-a
-{
-    text-decoration: none;
+/* Navbar Styling */
+.navbar {
+    background-color: #333333; /* Dark grey navbar background */
+    position: relative; /* Normal navbar without sticky behavior */
+    padding: 10px 0; /* Padding for navbar */
 }
 
-div
-{
-    justify-content: space-around;
+/* Carousel Section */
+.carousel-container {
+    margin-top: 0; /* Remove any default margin from the top */
+    padding-top: 0; /* Remove any default padding from the top */
+    height: 100vh; /* Full viewport height for carousel */
+}
+
+/* Ensure the carousel image fills the space */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Set margin to 0 on all sections to avoid unwanted spaces */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #ffffff !important;
+}
+
+.btn-blue {
+    background-color: #007acc;  /* Dark blue for the buttons */
+    border: none;
+    color: #ffffff;
+}
+
+.btn-blue:hover {
+    background-color: #005fa3;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+
+footer {
+    background-color: #000;
+    color: #ffffff;
     text-align: center;
-    color: white;
+    padding: 10px 0;
+}
+
+h1, h2, h3 {
+    color: #007acc;  /* Dark Blue for titles */
+    text-align: center;
+}
+
+.card {
+    background-color: #212529;
+    border: none;
+}
+
+.card-title {
+    color: #007acc;
+}
+
+.card-text {
+    color: #b0c4de;
+}
+
+.card-footer {
+    background-color: transparent;
+}
+
+.btn-blue-outline {
+    background-color: transparent;
+    border: 2px solid #007acc;
+    color: #007acc;
+}
+
+.btn-blue-outline:hover {
+    background-color: #007acc;
+    color: #ffffff;
+}
+
+.bg-dark {
+    background-color: #212529 !important;
+}
+
+footer {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    color: #007acc;
+    text-align: center;
+}
+
+form {
+    background-color: #000;
+    border: 1px solid #007acc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form .form-label {
+    color: #007acc;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #007acc;
+    color: #000;
+}
+
+.nav-pills .nav-link {
+    color: #007acc;
+}
+
+/* Custom blue button styles */
+.navbar .btn-blue {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+}
+
+.navbar .btn-blue:hover {
+    background-color: #005fa3;
+}
+
+.navbar .btn-blue-outline {
+    background-color: transparent;
+    color: #007acc;
+    border: 2px solid #007acc;
+}
+
+.navbar .btn-blue-outline:hover {
+    background-color: #007acc;
+    color: #fff;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Larger gap */
+}
+
+footer {
+    margin-top: auto; /* Ensures the footer stays at the bottom */
 }

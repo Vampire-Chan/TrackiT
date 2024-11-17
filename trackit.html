@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackIT - Map</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        /* Styling the map */
+        #map {
+            height: 500px;
+            width: 100%;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">TrackIT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="btn btn-blue" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-blue" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-blue" href="registration.html">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-blue" href="trackit.html">TrackIT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Map Section -->
+<div class="container my-5 pt-5">
+    <h2 class="text-center mb-4 text-light">TrackIT Map</h2>
+    <div id="map">
+        <!-- OpenStreetMap Embed with ESRI Satellite Layer -->
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=77.938869%2C30.292917%2C77.957909%2C30.303549&layer=esri_satellite&marker=30.298233%2C77.948389" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="mt-auto bg-dark text-white text-center py-3">
+    <p>&copy; 2024 TrackIT. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
