@@ -22,7 +22,8 @@ body {
 /* Ensure the carousel image fills the space */
 .carousel-inner img {
     width: 100%;
-    height: auto;
+    height: 800px;
+    
 }
 
 /* Set margin to 0 on all sections to avoid unwanted spaces */
@@ -108,7 +109,7 @@ h1 {
 
 form {
     background-color: #000;
-    border: 1px solid #007acc;
+    border: 1px solid #ffffff;
     padding: 20px;
     border-radius: 10px;
 }

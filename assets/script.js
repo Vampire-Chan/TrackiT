@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Carousel configuration
-    const carouselElement = document.querySelector("#imageCarousel");
-    const carousel = new bootstrap.Carousel(carouselElement, {
-        interval: 5000, // 5 seconds
-        ride: "carousel"
-    });
+    // Find the carousel element in your HTML
+    const carouselElement = document.querySelector("#carouselExampleControls");
 
-    console.log("Website Initialized!");
+    // Initialize Bootstrap's carousel with the necessary options
+    if (carouselElement) {
+        const carousel = new bootstrap.Carousel(carouselElement, {
+            interval: 3000,  // 3 seconds for auto-slide
+            ride: "carousel", // Automatically start
+            keyboard: true,   // Allow keyboard interaction
+        });
+    }
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const goToRegisterLink = document.getElementById("goToRegister");

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,105 +10,195 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
 
-<!-- Header/Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">TrackIT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="btn btn-blue" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-blue" href="services.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-blue" href="registration.html">Log In</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-blue" href="trackit.html">TrackIT</a>
-                </li>
-            </ul>
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">TrackIT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-blue" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-blue" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-blue" href="registration.html">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-blue" href="trackit.html">TrackIT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login & Registration Tabs -->
+    <div class="container my-5 pt-5" style="color: rgb(255, 255, 255);">
+        <h1 class="text-center mb-4" style="color: rgb(255, 255, 255);">TrackIT</h1>
+
+        <!-- Nav Tabs -->
+        <ul class="nav nav-pills mb-3 justify-content-center" id="loginRegisterTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="login-tab" data-bs-toggle="pill" href="#login" role="tab"
+                    aria-controls="login" aria-selected="true" style="color: rgb(255, 255, 255);">Login</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="register-tab" data-bs-toggle="pill" href="#register" role="tab"
+                    aria-controls="register" aria-selected="false" style="color: rgb(255, 255, 255);">Register</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="loginRegisterTabsContent">
+
+            <!-- Login Form -->
+            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                <form id="loginForm" class="mx-auto" style="max-width: 400px;">
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label" style="color: rgb(255, 255, 255);">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label" style="color: rgb(255, 255, 255);">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-blue">Login</button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p>Don't have an account? <a href="#register" id="goToRegister" style="color: rgb(84, 173, 245);">No Account? Get one Now</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                <form id="registerForm" class="mx-auto" style="max-width: 400px;">
+                    <div class="mb-3">
+                        <label for="name" class="form-label" style="color: rgb(255, 255, 255);">Name</label>
+                        <input type="text" class="form-control" id="name" name="username" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label" style="color: rgb(255, 255, 255);">Email</label>
+                        <input type="email" class="form-control" id="registerEmail" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label" style="color: rgb(255, 255, 255);">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-blue" style="color: rgb(255, 255, 255);">Register</button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p>Already have an account? <a href="#login" id="goToLogin" style="color: rgb(84, 173, 245);">Login Here</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</nav>
 
-<!-- Login & Registration Tabs -->
-<div class="container my-5 pt-5">
-    <h1 class="text-center mb-4">TrackIT</h1>
-    
-    <!-- Nav Tabs -->
-    <ul class="nav nav-pills mb-3 justify-content-center" id="loginRegisterTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="login-tab" data-bs-toggle="pill" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="register-tab" data-bs-toggle="pill" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
-        </li>
-    </ul>
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <p>&copy; 2024 TrackIT. All Rights Reserved.</p>
+    </footer>
 
-    <!-- Tab Content -->
-    <div class="tab-content" id="loginRegisterTabsContent">
-        
-        <!-- Login Form -->
-        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-            <form class="mx-auto" style="max-width: 400px;">
-                <div class="mb-3">
-                    <label for="loginEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="loginPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
-                </div>
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-blue">Login</button>
-                </div>
-                <div class="text-center mt-3">
-                    <p>Don't have an account? <a href="#register" id="goToRegister">No Account? Get one Now</a></p>
-                </div>
-            </form>
-        </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- External JS -->
+    <script src="assets/script.js"></script>
 
-        <!-- Registration Form -->
-        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-            <form class="mx-auto" style="max-width: 400px;">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="registerEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="registerPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="registerPassword" placeholder="Enter your password" required>
-                </div>
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-blue">Register</button>
-                </div>
-                <div class="text-center mt-3">
-                    <p>Already have an account? <a href="#login" id="goToLogin">Login Here</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+    <!-- Internal JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Carousel configuration
+            const carouselElement = document.querySelector("#imageCarousel");
+            const carousel = new bootstrap.Carousel(carouselElement, {
+                interval: 3000, // 3 seconds
+                ride: "carousel"
+            });
 
-<!-- Footer -->
-<footer class="mt-auto">
-    <p>&copy; 2024 TrackIT. All Rights Reserved.</p>
-</footer>
+            console.log("Website Initialized!");
+        });
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- External JS -->
-<script src="assets/script.js"></script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const goToRegisterLink = document.getElementById("goToRegister");
+            const goToLoginLink = document.getElementById("goToLogin");
+
+            goToRegisterLink.addEventListener("click", () => {
+                const registerTab = new bootstrap.Tab(document.getElementById("register-tab"));
+                registerTab.show();
+            });
+
+            goToLoginLink.addEventListener("click", () => {
+                const loginTab = new bootstrap.Tab(document.getElementById("login-tab"));
+                loginTab.show();
+            });
+
+            // Handle Registration
+            document.getElementById("registerForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("registerEmail").value;
+                const password = document.getElementById("registerPassword").value;
+
+                try {
+                    const response = await fetch("http://localhost:3000/register", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ username: name, email, password }),
+                    });
+
+                    const result = await response.json();
+                    if (response.ok) {
+                        alert(result.message); // Success message
+                        // Optionally switch to Login tab after registration
+                        const loginTab = new bootstrap.Tab(document.getElementById("login-tab"));
+                        loginTab.show();
+                    } else {
+                        alert(result.error || "Registration failed.");
+                    }
+                } catch (err) {
+                    console.error(err);
+                    alert("An error occurred. Please try again.");
+                }
+            });
+
+            // Handle Login
+            document.getElementById("loginForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const email = document.getElementById("loginEmail").value;
+                const password = document.getElementById("loginPassword").value;
+
+                try {
+                    const response = await fetch("http://localhost:3000/login", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email, password }),
+                    });
+
+                    const result = await response.json();
+                    if (response.ok) {
+                        alert(result.message); // Success message
+                        // Redirect to another page or show logged-in state
+                        window.location.href = "trackit.html";
+                    } else {
+                        alert(result.error || "Login failed.");
+                    }
+                } catch (err) {
+                    console.error(err);
+                    alert("An error occurred. Please try again.");
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
